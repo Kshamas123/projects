@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+    <style>
+      body{background-color: antiquewhite;}
+      h1{font-size:45px;text-align: center;}
+    form{line-height: 2.5em;font-size: 25px;}
+    td{padding: 10px; margin: 10px;}
+    input{font-size: larger;}
+    select{font-size: larger;}
+    .btn:hover{background-color: antiquewhite;}
+    </style>
+</head>
+<body>
+  <h1>FILL THE FORM</h1>
+    <form action="backend.php"><table>
+      <tbody><div><tr><td>NAME:</td><td><input type="text" name="myname"></td></tr></div>
+      <div><tr><td>LAST NAME:</td><td><input type="text" name="mylastname"></td></tr></div>
+      <div><tr><td>USER NAME:</td><td><input type="text" name="username"></td></tr></div>
+      <div><tr><td>EMAIL:</td><td><input type="text" name="email"></td></tr></div>
+      <div><tr><td>PASSWORD:</td><td><input type="text" name="password"></td></tr></div>
+      <div><tr><td>REPASSOWORD:</td><td><input type="text" name="repasssword"></td></tr></div>
+      <div><tr><td>D.O.B:</td><td><input type="date" name="dob"></td></tr></div>
+      <div><tr><td>MOBILE NO:</td><td><input type="text" name="number"></td></tr></div>
+      <div><tr><td>COUNTRY:</td><td>
+        <select name="choose yours">
+       <option value="CHOOSE YOURS">CHOOSE YOURS</option>
+<option value="india">INDIA</option>
+<option value="USA">USA</option>
+<option value="UK">UK</option>
+<option value="CANADA">CANADA</option>
+<option value="AUSTRALIA">AUSTRALIAS</option>
+</td></tr></select></div>
+<div><tr><td>ZIP CODE:</td><td><input type="text" name="code"></td></tr></div>
+<div><tr><td>GENDER:</td><td>MALE<input type="radio" name="gender"></td><td>FEMALE<input type="radio" name="gender"></td></tr></div>
+<tr><td></td><td><input type="checkbox" name="condition">I Agree with the Terms and Condition</td></tr>
+</tbody></table>
+<div><input type="submit" class="btn" value="submit now"></div>
+<div><input type="reset" class="btn" value="reset"></div>
+</form>
+</body>
+</html>
