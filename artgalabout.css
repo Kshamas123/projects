@@ -1,0 +1,187 @@
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:  rgb(202, 197, 197);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgb(21, 13, 13);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin-left: 100px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+#about-img {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.about-main {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://th.bing.com/th/id/OIP.Ek6qSwezcQ2Gs7eTumoUDAHaNK?w=187&h=333&c=7&r=0&o=5&dpr=1.3&pid=1.7') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 300px 20px;
+    position: relative;
+    height: 100%;
+}
+
+.about-main h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-main h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.about-content {
+    margin-top: 20px;
+    font-family: cursive;
+    padding: 20px;
+    background-color: rgb(202, 197, 197);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h2 {
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    line-height: 1.6;
+}
+
+.timeline-section {
+    padding: 40px 20px;
+    background: rgb(202, 197, 197);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #d4d4d4;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-event {
+    position: relative;
+    margin: 20px 0;
+}
+
+.timeline-event .timeline-content {
+    padding: 20px;
+    background: aliceblue;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.timeline-event .timeline-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.timeline-event .timeline-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.timeline-event::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 4px solid #d4d4d4;
+    top: 20px;
+    left: 50%;
+    margin-left: -10px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-event:nth-child(odd) .timeline-content {
+    left: 0;
+}
+
+.timeline-event:nth-child(even) .timeline-content {
+    left: 55%;
+}
+
+.timeline-event:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #f6e6e6;
+    top: 28px;
+    left: 50%;
+    z-index: -1;
+}
+
+.timeline-event:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #ecdede;
+    top: 28px;
+    right: 50%;
+    z-index: -1;
+}
+footer{
+    background-color: #333;
+    color: #fff;
+}
+footer ul{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+
+}
+footer ul li{
+    list-style: none;
+}
