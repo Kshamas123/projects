@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-         * {
-            margin: 0; 
+        * {
+            margin: 0;
         }
+
         .nav-items {
             background-color: purple;
             height: 70px;
         }
-        .question{
+
+        .question {
             margin-top: 20px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-        input{
+
+        input {
             margin: 10px;
         }
-        p{
+
+        p {
             font-size: larger;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
+
         .popup {
             display: none;
             position: fixed;
@@ -40,9 +46,12 @@
             border-radius: 10px;
             font-size: x-large;
         }
-        .popup h2, .popup #result {
+
+        .popup h2,
+        .popup #result {
             color: aliceblue;
         }
+
         .popup .close {
             cursor: pointer;
             position: absolute;
@@ -51,6 +60,7 @@
             font-size: 18px;
             color: aliceblue;
         }
+
         .overlay {
             display: none;
             position: fixed;
@@ -61,6 +71,7 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 999;
         }
+
         .finalbtn {
             width: 220px;
             height: 55px;
@@ -75,118 +86,150 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
+
         .finalbtn:hover {
             background-color: #ff1a1a;
             transform: scale(1.05);
         }
+
         .finalbtn:active {
             background-color: #cc0000;
             transform: scale(0.98);
         }
-        a{
-           text-decoration: none;
-           color: aliceblue;
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
         }
     </style>
 </head>
+
 <body>
     <header class="nav-items">
         <nav>
             <div class="nav-items">
-                <img src="https://th.bing.com/th/id/OIP.FgyYfFj19LjrU5CR6oplFAHaD5?w=200&h=50&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="quiz logo">
+                <img src="https://th.bing.com/th/id/OIP.FgyYfFj19LjrU5CR6oplFAHaD5?w=200&h=50&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                    alt="quiz logo">
             </div>
         </nav>
     </header>
     <h2 class="question">1.What is the capital of France?</h2>
-    <p><input type="button" value="1" onclick="evaluate1(this,1,1)"  class="q1">&nbsp;&nbsp;<strong>a) Berlin</strong></p>
-    <p><input type="button" value="2" onclick="evaluate1(this,1,2)" class="q1">&nbsp;&nbsp;<strong>b) Madrid</strong></p>
+    <p><input type="button" value="1" onclick="evaluate1(this,1,1)" class="q1">&nbsp;&nbsp;<strong>a) Berlin</strong>
+    </p>
+    <p><input type="button" value="2" onclick="evaluate1(this,1,2)" class="q1">&nbsp;&nbsp;<strong>b) Madrid</strong>
+    </p>
     <p><input type="button" value="3" onclick="evaluate1(this,1,3)" class="q1">&nbsp;&nbsp;<strong>c) Paris</strong></p>
     <p><input type="button" value="4" onclick="evaluate1(this,1,4)" class="q1">&nbsp;&nbsp;<strong>d) Rome</strong></p>
     <h2 class="question">2.Who wrote the play "Romeo and Juliet"?</h2>
-    <p><input type="button" value="1" onclick="evaluate1(this,2,1)"  class="q2">&nbsp;&nbsp;<strong>a) William Shakespeare</strong></p>
-    <p><input type="button" value="2" onclick="evaluate1(this,2,2)" class="q2">&nbsp;&nbsp;<strong>b) Charles Dickens</strong></p>
-    <p><input type="button" value="3" onclick="evaluate1(this,2,3)" class="q2">&nbsp;&nbsp;<strong>c) Mark Twain</strong></p>
-    <p><input type="button" value="4" onclick="evaluate1(this,2,4)" class="q2">&nbsp;&nbsp;<strong>d) Jane Austen</strong></p>
+    <p><input type="button" value="1" onclick="evaluate1(this,2,1)" class="q2">&nbsp;&nbsp;<strong>a) William
+            Shakespeare</strong></p>
+    <p><input type="button" value="2" onclick="evaluate1(this,2,2)" class="q2">&nbsp;&nbsp;<strong>b) Charles
+            Dickens</strong></p>
+    <p><input type="button" value="3" onclick="evaluate1(this,2,3)" class="q2">&nbsp;&nbsp;<strong>c) Mark
+            Twain</strong></p>
+    <p><input type="button" value="4" onclick="evaluate1(this,2,4)" class="q2">&nbsp;&nbsp;<strong>d) Jane
+            Austen</strong></p>
     <h2 class="question">3.Which planet is known as the Red Planet?</h2>
-    <p><input type="button" value="1" onclick="evaluate1(this,3,1)"  class="q3">&nbsp;&nbsp;<strong>a) Earth</strong></p>
+    <p><input type="button" value="1" onclick="evaluate1(this,3,1)" class="q3">&nbsp;&nbsp;<strong>a) Earth</strong></p>
     <p><input type="button" value="2" onclick="evaluate1(this,3,2)" class="q3">&nbsp;&nbsp;<strong>b) Mars</strong></p>
-    <p><input type="button" value="3" onclick="evaluate1(this,3,3)" class="q3">&nbsp;&nbsp;<strong>c) Jupiter</strong></p>
+    <p><input type="button" value="3" onclick="evaluate1(this,3,3)" class="q3">&nbsp;&nbsp;<strong>c) Jupiter</strong>
+    </p>
     <p><input type="button" value="4" onclick="evaluate1(this,3,4)" class="q3">&nbsp;&nbsp;<strong>d) Venus</strong></p>
     <h2 class="question">4.What is the largest mammal in the world?</h2>
-    <p><input type="button" value="1" onclick="evaluate1(this,4,1)"  class="q4">&nbsp;&nbsp;<strong>a) Elephant</strong></p>
-    <p><input type="button" value="2" onclick="evaluate1(this,4,2)" class="q4">&nbsp;&nbsp;<strong>b) Blue Whale</strong></p>
-    <p><input type="button" value="3" onclick="evaluate1(this,4,3)" class="q4">&nbsp;&nbsp;<strong>c) Giraffe</strong></p>
-    <p><input type="button" value="4" onclick="evaluate1(this,4,4)" class="q4">&nbsp;&nbsp;<strong>d) Hippopotamus </strong></p>
+    <p><input type="button" value="1" onclick="evaluate1(this,4,1)" class="q4">&nbsp;&nbsp;<strong>a) Elephant</strong>
+    </p>
+    <p><input type="button" value="2" onclick="evaluate1(this,4,2)" class="q4">&nbsp;&nbsp;<strong>b) Blue
+            Whale</strong></p>
+    <p><input type="button" value="3" onclick="evaluate1(this,4,3)" class="q4">&nbsp;&nbsp;<strong>c) Giraffe</strong>
+    </p>
+    <p><input type="button" value="4" onclick="evaluate1(this,4,4)" class="q4">&nbsp;&nbsp;<strong>d) Hippopotamus
+        </strong></p>
     <h2 class="question">5.Who was the first President of the United States?</h2>
-    <p><input type="button" value="1" onclick="evaluate1(this,5,1)"  class="q5">&nbsp;&nbsp;<strong>a)  Thomas Jefferson</strong></p>
-    <p><input type="button" value="2" onclick="evaluate1(this,5,2)" class="q5">&nbsp;&nbsp;<strong>b) Abraham Lincoln</strong></p>
-    <p><input type="button" value="3" onclick="evaluate1(this,5,3)" class="q5">&nbsp;&nbsp;<strong>c) George Washington</strong></p>
-    <p><input type="button" value="4" onclick="evaluate1(this,5,4)" class="q5">&nbsp;&nbsp;<strong>d) John Adams</strong></p>
+    <p><input type="button" value="1" onclick="evaluate1(this,5,1)" class="q5">&nbsp;&nbsp;<strong>a) Thomas
+            Jefferson</strong></p>
+    <p><input type="button" value="2" onclick="evaluate1(this,5,2)" class="q5">&nbsp;&nbsp;<strong>b) Abraham
+            Lincoln</strong></p>
+    <p><input type="button" value="3" onclick="evaluate1(this,5,3)" class="q5">&nbsp;&nbsp;<strong>c) George
+            Washington</strong></p>
+    <p><input type="button" value="4" onclick="evaluate1(this,5,4)" class="q5">&nbsp;&nbsp;<strong>d) John
+            Adams</strong></p>
     <h2 class="question">6.What is the smallest country in the world by land area?</h2>
-    <p><input type="button" value="1" onclick="evaluate1(this,6,1)"  class="q6">&nbsp;&nbsp;<strong>a)  Monaco</strong></p>
-    <p><input type="button" value="2" onclick="evaluate1(this,6,2)" class="q6">&nbsp;&nbsp;<strong>b)  Vatican City</strong></p>
-    <p><input type="button" value="3" onclick="evaluate1(this,6,3)" class="q6">&nbsp;&nbsp;<strong>c) San Marino</strong></p>
-    <p><input type="button" value="4" onclick="evaluate1(this,6,4)" class="q6">&nbsp;&nbsp;<strong>d) Liechtenstein</strong></p>
+    <p><input type="button" value="1" onclick="evaluate1(this,6,1)" class="q6">&nbsp;&nbsp;<strong>a) Monaco</strong>
+    </p>
+    <p><input type="button" value="2" onclick="evaluate1(this,6,2)" class="q6">&nbsp;&nbsp;<strong>b) Vatican
+            City</strong></p>
+    <p><input type="button" value="3" onclick="evaluate1(this,6,3)" class="q6">&nbsp;&nbsp;<strong>c) San
+            Marino</strong></p>
+    <p><input type="button" value="4" onclick="evaluate1(this,6,4)" class="q6">&nbsp;&nbsp;<strong>d)
+            Liechtenstein</strong></p>
     <h2 class="question">7.In which year did the Titanic sink?</h2>
-    <p><input type="button" value="1" onclick="evaluate1(this,7,1)"  class="q7">&nbsp;&nbsp;<strong>a) 1910</strong></p>
-    <p><input type="button" value="2" onclick="evaluate1(this,7,2)" class="q7">&nbsp;&nbsp;<strong>b)  1912</strong></p>
+    <p><input type="button" value="1" onclick="evaluate1(this,7,1)" class="q7">&nbsp;&nbsp;<strong>a) 1910</strong></p>
+    <p><input type="button" value="2" onclick="evaluate1(this,7,2)" class="q7">&nbsp;&nbsp;<strong>b) 1912</strong></p>
     <p><input type="button" value="3" onclick="evaluate1(this,7,3)" class="q7">&nbsp;&nbsp;<strong>c) 1914</strong></p>
     <p><input type="button" value="4" onclick="evaluate1(this,7,4)" class="q7">&nbsp;&nbsp;<strong>d) 1916</strong></p>
     <h2 class="question">8.What is the chemical symbol for gold?</h2>
-    <p><input type="button" value="1" onclick="evaluate1(this,8,1)"  class="q8">&nbsp;&nbsp;<strong>a) Au</strong></p>
-    <p><input type="button" value="2" onclick="evaluate1(this,8,2)" class="q8">&nbsp;&nbsp;<strong>b)  Ag</strong></p>
+    <p><input type="button" value="1" onclick="evaluate1(this,8,1)" class="q8">&nbsp;&nbsp;<strong>a) Au</strong></p>
+    <p><input type="button" value="2" onclick="evaluate1(this,8,2)" class="q8">&nbsp;&nbsp;<strong>b) Ag</strong></p>
     <p><input type="button" value="3" onclick="evaluate1(this,8,3)" class="q8">&nbsp;&nbsp;<strong>c) Gd</strong></p>
     <p><input type="button" value="4" onclick="evaluate1(this,8,4)" class="q8">&nbsp;&nbsp;<strong>d) Hg</strong></p>
     <h2 class="question">9.Who painted the Mona Lisa?</h2>
-    <p><input type="button" value="1" onclick="evaluate1(this,9,1)"  class="q9">&nbsp;&nbsp;<strong>a) Michelangelo</strong></p>
-    <p><input type="button" value="2" onclick="evaluate1(this,9,2)" class="q9">&nbsp;&nbsp;<strong>b) Leonardo da Vinci</strong></p>
-    <p><input type="button" value="3" onclick="evaluate1(this,9,3)" class="q9">&nbsp;&nbsp;<strong>c) Vincent van Gogh</strong></p>
-    <p><input type="button" value="4" onclick="evaluate1(this,9,4)" class="q9">&nbsp;&nbsp;<strong>d)  Pablo Picasso</strong></p>
+    <p><input type="button" value="1" onclick="evaluate1(this,9,1)" class="q9">&nbsp;&nbsp;<strong>a)
+            Michelangelo</strong></p>
+    <p><input type="button" value="2" onclick="evaluate1(this,9,2)" class="q9">&nbsp;&nbsp;<strong>b) Leonardo da
+            Vinci</strong></p>
+    <p><input type="button" value="3" onclick="evaluate1(this,9,3)" class="q9">&nbsp;&nbsp;<strong>c) Vincent van
+            Gogh</strong></p>
+    <p><input type="button" value="4" onclick="evaluate1(this,9,4)" class="q9">&nbsp;&nbsp;<strong>d) Pablo
+            Picasso</strong></p>
     <h2 class="question">10.Which continent is known as the 'Dark Continent'?</h2>
-    <p><input type="button" value="1" onclick="evaluate1(this,10,1)"  class="q10">&nbsp;&nbsp;<strong>a) Asia</strong></p>
-    <p><input type="button" value="2" onclick="evaluate1(this,10,2)" class="q10">&nbsp;&nbsp;<strong>b) Africa</strong></p>
-    <p><input type="button" value="3" onclick="evaluate1(this,10,3)" class="q10">&nbsp;&nbsp;<strong>c) South America</strong></p>
-    <p><input type="button" value="4" onclick="evaluate1(this,10,4)" class="q10">&nbsp;&nbsp;<strong>d) Australia</strong></p>    
+    <p><input type="button" value="1" onclick="evaluate1(this,10,1)" class="q10">&nbsp;&nbsp;<strong>a) Asia</strong>
+    </p>
+    <p><input type="button" value="2" onclick="evaluate1(this,10,2)" class="q10">&nbsp;&nbsp;<strong>b) Africa</strong>
+    </p>
+    <p><input type="button" value="3" onclick="evaluate1(this,10,3)" class="q10">&nbsp;&nbsp;<strong>c) South
+            America</strong></p>
+    <p><input type="button" value="4" onclick="evaluate1(this,10,4)" class="q10">&nbsp;&nbsp;<strong>d)
+            Australia</strong></p>
     <button onclick="showPopup()" class="finalbtn">SUBMIT</button>
-</div>
-<div class="overlay" id="overlay"></div>
-<div class="popup" id="popup">
-    <span class="close" onclick="closePopup()"><a href="quiz.html">&times;</a></span>
-    <h2>YOUR SCORE:</h2>
-    <h2 id="result"></h2>
-</div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <span class="close" onclick="closePopup()"><a href="quiz.html">&times;</a></span>
+        <h2>YOUR SCORE:</h2>
+        <h2 id="result"></h2>
+    </div>
     <script>
-       var res = 0;
-       var correctans={
-        1:3,
-        2:1,
-        3:2,
-        4:2,
-        5:3,
-        6:2,
-        7:2,
-        8:1,
-        9:2,
-        10:2
-       }
-
-function evaluate1(button,q,val) {
-    if(correctans[q]==val)
-    res++;
-    document.getElementById('result').innerHTML = res;
-    disableOtherButtons(button.className);
-}
-
-function disableOtherButtons(className) {
-    var buttons = document.querySelectorAll('input[type="button"]');
-    buttons.forEach(button => {
-        if (button.className == className) {
-            button.disabled = true; // Disable all buttons except those with the same class
+        var res = 0;
+        var correctans = {
+            1: 3,
+            2: 1,
+            3: 2,
+            4: 2,
+            5: 3,
+            6: 2,
+            7: 2,
+            8: 1,
+            9: 2,
+            10: 2
         }
-    });
 
-}
-function showPopup() {
+        function evaluate1(button, q, val) {
+            if (correctans[q] == val)
+                res++;
+            document.getElementById('result').innerHTML = res;
+            disableOtherButtons(button.className);
+        }
+
+        function disableOtherButtons(className) {
+            var buttons = document.querySelectorAll('input[type="button"]');
+            buttons.forEach(button => {
+                if (button.className == className) {
+                    button.disabled = true; // Disable all buttons except those with the same class
+                }
+            });
+
+        }
+        function showPopup() {
             document.getElementById('popup').style.display = 'block';
             document.getElementById('overlay').style.display = 'block';
             document.getElementById('result').innerHTML = res;
@@ -201,5 +244,5 @@ function showPopup() {
 
     </script>
 </body>
-</html>
 
+</html>
